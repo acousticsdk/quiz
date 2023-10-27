@@ -1,0 +1,31 @@
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 944px;
+    margin: 0 auto;
+    padding: 24px 24px 0;
+
+  }
+  .simple,
+  .multiple,
+  .almost-done,
+  .ai-block-wrapper,
+  .testimonials,
+  .phone-block,
+  .data-picker,
+
+  .multiple + div.continueButton-wrapper  {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .testimonials {
+    border-radius: 16px;
+  }
+
+  .header + div {
+    position: absolute;
+    left: calc(100% - 200px);
+    margin-left: -50%;
+  }
+
+}

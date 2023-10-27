@@ -1,0 +1,48 @@
+@media only screen and (max-width: 543px) {
+
+  .header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 16px 0;
+  }
+
+  .simple,
+  .multiple,
+  .almost-done,
+  .ai-block-wrapper,
+
+  .phone-block,
+  .data-picker,
+  .multiple + .continueButton  {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+
+
+  .almost-done {
+    margin-top: 30px;
+    width: calc(100% - 32px);
+  }
+
+  .testimonials {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .header + div {
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  body .result {
+    width: 100%;
+    padding: 0 16px
+  }
+  .multiple + div.continueButton-wrapper {
+    width: calc(100% - 32px);
+
+  }
+}
