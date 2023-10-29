@@ -21,9 +21,11 @@
 
 
 
-  .almost-done {
-    margin-top: 30px;
-    width: calc(100% - 32px);
+  body {
+    .almost-done {
+      margin-top: 30px;
+      width: calc(100% - 32px);
+    }
   }
 
   .testimonials {
