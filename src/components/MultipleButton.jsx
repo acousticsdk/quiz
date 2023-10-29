@@ -1,4 +1,4 @@
-import ICONS from "../assets/icons/icons";
+// import ICONS from "./icons";
 import {useEffect, useState} from "react";
 
 const MultipleButton = ({obj, index, setData}) => {
@@ -21,7 +21,7 @@ const MultipleButton = ({obj, index, setData}) => {
 
     return(
             <div key={index} className={isActive ? 'button active' : 'button'} onClick={toggleClass}>
-                {obj.icon && <img  src={ICONS[obj.icon]}/>}
+                {obj.icon && <img  src={"assets/icons/"+obj.icon}/>}
                 <span  className="answer">{obj.text}</span>
             </div>
     )

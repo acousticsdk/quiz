@@ -15,7 +15,7 @@ const Result = () => {
             <div className="result">
                 <h3>Results:</h3>
                 {
-                    answers.map(el => (<div>
+                    answers.map((el, index) => (<div key={index}>
                             <div className="question"><span>{el[0]}</span></div>
                             <div> {el[1]}</div>
                         </div>)

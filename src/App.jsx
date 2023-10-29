@@ -1,9 +1,10 @@
+
 import { useState } from 'react'
 
 import './scss/App.scss'
 import Header from "./components/Header";
 import SimpleAnswers from "./components/SimpleAnswers";
-import AllQuestions from "./assets/db.json"
+import AllQuestions from "./db.json"
 import MultipleAnswers from "./components/MultipleAnswers";
 import AlmostDone from "./components/AlmostDone";
 import AiBlock from "./components/AiBlock";
@@ -12,6 +13,7 @@ import DataPicker from "./components/DataPicker";
 import LocalStorageApi from "./api/LocalStorageApi";
 import Result from "./components/Result";
 import {motion,AnimatePresence} from "framer-motion";
+
 
 function App() {
 
@@ -22,18 +24,18 @@ function App() {
     const multipleAnswers = AllQuestions.filter((el) => el.type === 'multiple')
     const currentQuestion = AllQuestions[step - 1]
 
-    console.log()
+
 
     const goNextStep = () => {
         setStep(step + 1)
-        setNext(step)
+        setNext(step + 1)
     }
 
     const onClickAnswer = (question, answer ) => {
         setTimeout(function () {
             LocalStorageApi.save(question, answer)
             setStep(step + 1)
-            setNext(step)
+            setNext(step + 1)
         },350)
     }
 
@@ -54,9 +56,16 @@ function App() {
         <AnimatePresence>
             <motion.div
                 key={next}
-                initial={{ x: 300 }}
-                animate={{ x: 0}}
-                exit={{x:-400,opacity:0}}>
+                initial={{ x: 300,opacity:0 }}
+                animate={{ x: 0,opacity:1}}
+                exit={{x:-300,opacity:0}}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 0.25,
+
+                }}
+
+            >
 
         {step <= simpleAnswers.length &&
             <SimpleAnswers question={currentQuestion} onClickAnswer={onClickAnswer}/>}

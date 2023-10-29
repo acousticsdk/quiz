@@ -4,7 +4,7 @@ import { PhoneInput} from 'react-international-phone';
 import 'react-international-phone/style.css';
 
 import { PhoneNumberUtil } from 'google-libphonenumber';
-import ICONS from "../assets/icons/icons";
+// import ICONS from "./icons";
 import LocalStorageApi from "../api/LocalStorageApi";
 const phoneUtil = PhoneNumberUtil.getInstance();
 
@@ -48,7 +48,7 @@ const PhoneBlock = ({goNextStep}) => {
             </div>
 
             <div className="privacy-block">
-                <img src={ICONS['privacy.svg']}/>
+                <img src="assets/icons/privacy.svg"/>
                 <p >We respect your privacy and are committed to protecting your personal data.</p>
             </div>
 

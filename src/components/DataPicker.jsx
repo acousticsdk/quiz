@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Select from 'react-select';
 import Timezone from "./Timezone";
-import ICONS from "../assets/icons/icons"
+// import ICONS from "./icons"
 import LocalStorageApi from "../api/LocalStorageApi";
 
 function getNext7Days() {
@@ -73,7 +73,7 @@ const [activeButtonIndex,SetActiveButtonIndex] = useState(0)
             {!timezoneIsOpened
                 ?   <span className="utc" onClick={() => setTimezoneIsOpened(true)}>
                         {currentTimezone}
-                        <img src={ICONS['pen.svg']}/>
+                        <img src="assets/icons/pen.svg"/>
                     </span>
                 : <Timezone changeTimezone={changeTimezone}/>
             }

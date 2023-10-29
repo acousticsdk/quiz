@@ -1,6 +1,5 @@
-import backArrow from "../assets/backArrow.svg";
-import allRightLogo from "../assets/logo.svg";
-import { useState} from "react";
+
+
 
 function Header({backStep, step, setStep, questionsCount}) {
 
@@ -14,10 +13,10 @@ function Header({backStep, step, setStep, questionsCount}) {
                 <div>
                     <img className={(step !== 1) ? 'backArrow active' : 'backArrow disabled'}
                          onClick={() => backStep() }
-                         src={backArrow}/>
+                         src="assets/backArrow.svg"/>
                 </div>
                 <div className="logo">
-                    <img onClick={() => {setStep(1)}} src={allRightLogo}/>
+                    <img onClick={() => {setStep(1)}} src="assets/logo.svg"/>
                 </div>
                 <div className="questionCounter">
                     <div><span className="currentQuestion">{step}</span> / <span className="totalQuestions">{questionsCount}</span></div>

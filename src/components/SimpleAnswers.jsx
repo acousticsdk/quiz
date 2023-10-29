@@ -1,6 +1,6 @@
-import ICONS from "../assets/icons/icons"
+
 import {useState} from "react";
-import { motion, AnimatePresence } from "framer-motion"
+
 
 const SimpleAnswers = ({question, onClickAnswer}) => {
 
@@ -19,7 +19,7 @@ const SimpleAnswers = ({question, onClickAnswer}) => {
                         question.answers.map((obj,index) =>
                             <div key={index} className={isActive === index ? 'button active' : 'button'} onClick={() => handleClick(question,obj, index)}>
 
-                                {obj.icon && <img src={ICONS[obj.icon]}/>}
+                                {obj.icon && <img src={"assets/icons/"+obj.icon}/>}
                                 <span  className="answer">{obj.text}</span>
                             </div>)
                     }

@@ -1,4 +1,4 @@
-import ICONS from "../assets/icons/icons"
+// import ICONS from "./icons"
 
 const Testimonials = () => {
     return (
@@ -17,13 +17,13 @@ const Testimonials = () => {
                     </div>
                     <div className="author-block">
                         <div className="author-photo">
-                            <img src={ICONS['author.png']}/>
+                            <img src="assets/icons/author.png"/>
                         </div>
                         <div>
                             <div className="author-name">Raluca and Sara</div>
                             <div className="author-rating">
                                 {[...new Array(5)].map((item, i) => (
-                                    <span key={i}><img src={ICONS['start.svg']}/></span>
+                                    <span key={i}><img src="assets/icons/start.svg"/></span>
                                 ))}
                             </div>
 
