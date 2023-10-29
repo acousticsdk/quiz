@@ -354,6 +354,12 @@ color: var(--gray);
   }
 }
 
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
 .ai-block-wrapper {
   > div {
     display: flex;

@@ -32,10 +32,12 @@ function App() {
     }
 
     const onClickAnswer = (question, answer ) => {
+        LocalStorageApi.save(question, answer)
         setTimeout(function () {
-            LocalStorageApi.save(question, answer)
-            setStep(step + 1)
+
             setNext(step + 1)
+            setStep(step + 1)
+
         },350)
     }
 
@@ -58,7 +60,7 @@ function App() {
                 key={next}
                 initial={{ x: 300,opacity:0 }}
                 animate={{ x: 0,opacity:1}}
-                exit={{x:-300,opacity:0}}
+                exit={{opacity:0}}
                 transition={{
                     ease: "easeInOut",
                     duration: 0.25,
