@@ -175,6 +175,7 @@ h3 {
       width: 32px;
       margin-right: 16px;
       z-index: 10;
+      min-width: 32px;
     }
   }
 }
@@ -250,6 +251,7 @@ h3 {
       pointer-events: none;
       z-index: 1;
       padding: 1px;
+      min-width: 52px;
     }
   }
 }
@@ -290,6 +292,11 @@ color: var(--gray);
   color: var(--gray-5);
   text-align: center;
   padding: 24px;
+
+  img {
+    min-width: 205px;
+  }
+
   h3 {
     margin-top: 0;
   }
