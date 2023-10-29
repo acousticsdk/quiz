@@ -176,6 +176,7 @@ h3 {
       margin-right: 16px;
       z-index: 10;
       min-width: 32px;
+      min-height: 32px;
     }
   }
 }
@@ -252,6 +253,7 @@ h3 {
       z-index: 1;
       padding: 1px;
       min-width: 52px;
+      min-height: 52px;
     }
   }
 }
@@ -295,6 +297,7 @@ color: var(--gray);
 
   img {
     min-width: 205px;
+    min-height: 205px;
   }
 
   h3 {
